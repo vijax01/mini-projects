@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    height: 4rem;
+    line-height: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #16404D;
+    color: #A6CDC6;
+}
+
+/* All the below settings are done to place the main .container div at the center of the page */
+main{ 
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #A6CDC6;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.container:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 255, 0.2);
+}
+
+input , button {
+    text-align: center;
+    padding: .25rem;
+    width: 100%;
+    border-radius: .5rem;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+#currency{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem;
+    gap: .5rem;
+    border: 1px solid #16404D;
+    border-radius: .25rem;
+}
+
+#msg{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+i{
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+
+select{
+    height: 2.7rem;
+    border: none;
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    margin-right: .2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #85169e;
+    color: white;
+}
+
+input , button{
+    border: 1px solid #16404D;
+    font-size: medium;
+}
+
+#from , #to {
+    text-align: center;
+}
+
+#msg {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know your Weather</title>
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+            @media(max-width:800px){
+                #main-heading{
+                    display: none;
+                }
+                .container-fluid{
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 1rem;
+                }
+            }
+        </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="p-1 container-fluid d-flex justify-content-start align-items-center bg-primary">
+            <img class="mx-3" src="./assets/logo.png" alt="logo image" height="50px">
+            <h1 id='main-heading' class="text-light mx-2">Weather App</h1>
+            <form id="form1" class="d-flex w-75" action="">
+                <input class=" text-center form-control" type="text" id="city" placeholder="Enter City Name">
+                <button class="btn btn-outline-light mx-4" type="button" id="submit">Search</button>
+            </form>            
+        </div>
+    </header>
+
+    <section class="mt-3 d-flex justify-content-center align-items-center">
+        <h2 class="my-2 d-inline py-2 me-4 text-center">Weather for <span id="name" >Your City</span></h2>
+        <img id="image" class="border rounded d-none" src="https://openweathermap.org/img/wn/04n.png"  height='30px' alt="weather icon">
+    </section>
+
+    <section class="d-flex text-body-secondary justify-content-center align-items-center gap-4">
+        <h5 class="mx-4">Date : <span id="date" ></span></h5> <!--1/15/2025-->
+        <h5 class="mx-4">Time : <span id="time" ></span></h5> <!--11:35:00 PM-->
+    </section>
+
+
+
+
+    <main class="container">
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mt-4 mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary">
+                        <h4 class="my-0 fw-normal">Weather & Visibility</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 id="cloudiness" class="d-inline-block pricing-card-title"></h1><h1 class="d-inline-block"><small
+                                class="text-body-secondary fw-light">%</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><b>Cloudiness</b></li>
+                            <li>Weather Description : <span id="desc" ></span></li>
+                            <li>Visibility : <span id="visibility" ></span></li>
+                            <li>Wind Speed : <span id="speed" ></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mt-4 mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary">
+                        <h4 class="my-0 fw-normal">Temperature Metrics</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 id="temp" class="d-inline-block pricing-card-title"></h1><h1 class="d-inline-block"><small
+                                class="text-body-secondary fw-light">&#8451;</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><b>Current Temperature</b></li>
+                            <li>Feels like : <span id="feels" ></span></li>
+                            <li>Maximum Temperature : <span id="maxTemp" ></span></li>
+                            <li>Minimum Temperature : <span id="minTemp" ></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mt-4 mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                        <h4 class="my-0 fw-normal">Environmental Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 id="humidity" class="d-inline-block pricing-card-title"></h1><h1 class="d-inline-block"><small
+                                class="text-body-secondary fw-light">%</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4 ">
+                            <li><b>Humidity</b></li>
+                            <li >Pressure : <span id="pressure" ></span></li>
+                            <li>Sunrise Time : <span id="sunrise" ></span></li>
+                            <li>Sunset Time : <span id="sunset" ></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
